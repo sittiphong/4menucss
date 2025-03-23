@@ -24,11 +24,12 @@ h1 .red{
     color: red;
     font-weight: bold
 }
+p {
+    text-indent: 50px;
+}
 p .green{
     color: green;
-    text-indent: 50px;
 }
 p .blue{
     color: blue;
-    text-indent: 50px;
 }
