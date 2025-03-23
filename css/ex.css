@@ -76,3 +76,7 @@ p .blue{
     font-family: Arial,Helvelica,sans-serif;
     font-size: 1.5em;
 }
+/*Images Content Postion*/
+.content-img{
+    text-align: center;
+}
