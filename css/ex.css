@@ -36,8 +36,19 @@ p .blue{
 .blockblue{
     border: 3px solid blue;
     padding: 50px;
+    width: 70%;
 }
 .blockyellow{
     border: 5px solid yellow;
     padding: 10px;
+}
+.blockyellowpage1{
+    border: 5px solid yellow;
+    padding: 10px;
+    background-color: #4F81BD;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    
 }
