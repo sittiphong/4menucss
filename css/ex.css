@@ -8,7 +8,7 @@ body{
 }
 
 
-/*Global color*/
+/*Global css*/
 h1{
     text-align: center;
 }
@@ -32,4 +32,12 @@ p .green{
 }
 p .blue{
     color: blue;
+}
+.blockblue{
+    border: 3px solid blue;
+    padding: 50px;
+}
+.blockyellow{
+    border: 5px solid yellow;
+    padding: 10px;
 }
