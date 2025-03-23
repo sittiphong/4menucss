@@ -1,12 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>การสร้างตารางข้อมูล</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 5px;
+        }
+        
+        .table-purple {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table-purple th, .table-purple td {
+            border: 2px solid purple;
+            padding: 8px;
+            text-align: left;
+        }
+        .table-purple th {
+            background-color: #e6ccff; 
+        }
+        .table-purple tr:nth-child(even) {
+            background-color: rgba(230, 204, 255, 0.5); 
+        }
+        .table-purple tr:nth-child(odd) {
+            background-color: white;
+        }
+
+       
+        .table-blue {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table-blue th, .table-blue td {
+            border: 2px solid rgb(0, 224, 253);
+            padding: 8px;
+            text-align: left;
+        }
+        .table-blue th {
+            background-color: #cce6ff; 
+        }
+        .table-blue tr:nth-child(even) {
+            background-color: rgba(204, 230, 255, 0.5); 
+        }
+        .table-blue tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        .red {
+            color: red;
+            font-weight: bold;
+        }
+        {
+            text-align: center;
+            color: blue;
+        }
+        
+        /* ตารางข้อมูลสินค้า */
+        .table-product {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table-product th, .table-product td {
+            border: 2px solid blue;
+            padding: 8px;
+            text-align: left;
+        }
+        .table-product th {
+            background-color: #cce6ff;
+        }
+        .table-product tr:nth-child(even) {
+            background-color: rgba(204, 230, 255, 0.5);
+        }
+        .table-product tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        /* กล่องลิงก์ */
+        .link-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        .link-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80px;
+            padding: 5px;
+            border: 2px solid black;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        .link-css1 {
+            background-color: #0099ff; /* สีฟ้า */
+        }
+        .link-css3 {
+            background-color: #ff99cc; /* สีชมพู */
+        }
+        .link-box img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+    </style>
 </head>
 <body>
-    
+</head>
+<body>
+
+    <h1><span  class="blue">การสร้าง</span><span class="red">ตาราง</span><span class="purple">ข้อมูล</span></h1>
+    <p>
+        เมื่อต้องใช้ฐานข้อมูล Access ในการจัดเก็บข้อมูลต่าง ๆ การสร้างตารางข้อมูลเป็นสิ่งจำเป็น 
+        กระบวนการสร้างตารางนี้ จะช่วยให้สามารถบันทึกข้อมูลเชิงโครงสร้างได้ดีขึ้น 
+        ดังนั้นควรศึกษาชนิดของข้อมูลที่รองรับใน Access ก่อน
+    </p>
+
+    <table class="table-purple">
+        <tr>
+            <th>ชนิดข้อมูล</th>
+            <th>ความหมาย</th>
+        
+        </tr>
+        <tr>
+        <td>Text</td>
+        <td>ใช้กับตัวอักษรสูงสุดได้ไม่เกิน 255 ตัวอักษร</td>
+        </tr>
+        <tr>
+            <td>Memo</td>
+            <td>เก็บข้อมูลที่เป็นตัวอักษรหรือตัวเลขได้มากถึง 63,999 ตัวอักษร
+        </tr>     
+        <tr>
+            <td>Number</td>
+            <td>เก็บข้อมูลที่เป็นตัวเลขที่ใช้ในการคำนวณ
+        </tr>     
+        <tr>
+            <td>Date/tame</td>
+            <td>เก็บข้อมูลที่เป็นประเภทวันที่หรือเวลา</td>
+        </tr>  
+        <tr>
+            <td>Currency</td>
+            <td>เก็บข้อมูลที่เป็นตัวเลขที่ใช้ในการคำนวณ โดยมีทศนิยมตั้งแต่ 1 ถึง 4 หลัก</td>
+        </tr>
+        <tr>
+            <td>AutoNumber</td>
+            <td>เก็บข้อมูลเป็นเลขลำดับไปซ้ำกัน โดยจะเพิ่มค่าทีละ 1 อัตโนมัติเมื่อมีรายการใหม่</td>
+        </tr>
+        <tr>
+            <td>Yes/No</td>
+            <td>เก็บข้อมูลที่มีลักษณะเป็น 2 ค่า (Yes/No, True/False, or On/Off)</td>
+        </tr>
+        <tr>
+            <td>OLE Object</td>
+            <td>เก็บข้อมูลที่เป็นลักษณะวัตถุ เช่น Excel, Word หรือ ไฟล์ภาพ</td>
+        </tr>
+    </table>
+      <p class="highlight">ตัวอย่าง:</p>
+
+    <p class="red"><i>ตารางข้อมูลประเภทสินค้า (tbProductType)</i></p>
+    <table class="table-blue">
+        <tr>
+            <th>ชื่อฟิลด์</th>
+            <th>ชนิดข้อมูล</th>
+            <th>ขนาด</th>
+            <th>หมายเหตุ</th>
+        </tr>
+        <tr>
+            <td>TypeID</td>
+            <td>Text</td>
+            <td>-</td>
+            <td>รหัสประเภทสินค้า</td>
+        </tr>
+        <tr>
+            <td>TypeName</td>
+            <td>Text</td>
+            <td>30</td>
+            <td>ชื่อประเภทสินค้า</td>
+        </tr>
+    </table>
+
+    <p class="red"><i>ตารางข้อมูลสินค้า (tbProduct)</i></p>
+    <table class="table-blue">
+     <tr>
+        <th>ชื่อฟิลด์</th>
+        <th>ชนิดข้อมูล</th>
+        <th>ขนาด</th>
+        <th>หมายเหตุ</th>
+    </tr>
+    <tr>
+        <td>ProductID</td>
+        <td>Text</td>
+        <td>4</td>
+        <td>รหัสสินค้า</td>
+    </tr>
+    <tr>
+        <td>ProductName</td>
+        <td>Text</td>
+        <td>50</td>
+        <td>ชื่อสินค้า</td>
+    </tr>
+    <tr>
+        <td>Unit</td>
+        <td>Number</td>
+        <td>Integer</td>
+        <td>จำนวนสินค้า</td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td>Number</td>
+        <td>Single</td>
+        <td>ราคาสินค้า</td>
+    </tr>
+    <tr>
+        <td>TypeID</td>
+        <td>Lookup Wizard</td>
+        <td>2</td>
+        <td>รหัสประเภทสินค้า</td>
+    </tr>
+</table>
+
+<div class="link-container">
+        <a href="Ex_css1.html" class="link-box link-css1">
+            <img src="ex_css1.png" alt="Ex_css1">
+            Ex_css1
+        </a>
+        <a href="Ex_css3.html" class="link-box link-css3">
+            <img src="ex_css3.png" alt="Ex_css3">
+            Ex_css3
+        </a>
+    </div>
 </body>
 </html>
