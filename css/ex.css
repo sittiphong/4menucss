@@ -36,7 +36,6 @@ p .blue{
 .blockblue{
     border: 3px solid blue;
     padding: 50px;
-    width: 70%;
 }
 .blockyellow{
     border: 5px solid yellow;
