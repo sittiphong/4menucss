@@ -8,7 +8,10 @@ body{
 }
 
 
-/*Tui wirte page 1*/
+/*Global color*/
+h1{
+    text-align: center;
+}
 h1 .purple{
     color: blueviolet;
     font-weight: bold
@@ -20,4 +23,12 @@ h1 .blue{
 h1 .red{
     color: red;
     font-weight: bold
+}
+p .green{
+    color: green;
+    text-indent: 50px;
+}
+p .blue{
+    color: blue;
+    text-indent: 50px;
 }
