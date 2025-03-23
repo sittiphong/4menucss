@@ -57,9 +57,22 @@ p .blue{
     text-align: center;
     
 }
+/*Topic*/
 .topic_purple{
-
+    background-color: yellow;
+    color: blueviolet;
+    padding: 10px 0px 10px 10px;
+    border: 1px dotted palevioletred;
+    border-radius: 5px;
+    font-family: Arial,Helvelica,sans-serif;
+    font-size: 1.5em;
 }
 .topic_blue{
-
+    background-color: yellow;
+    color: blue;
+    padding: 10px 0px 10px 10px;
+    border: 1px dotted palevioletred;
+    border-radius: 5px;
+    font-family: Arial,Helvelica,sans-serif;
+    font-size: 1.5em;
 }
