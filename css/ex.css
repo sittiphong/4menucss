@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    margin: auto;
+    width: 1200px;
+}
+
+
+/*Tui wirte page 1*/
+h1 .purple{
+    color: blueviolet;
+    font-weight: bold
+}
+h1 .blue{
+    color: blue;
+    font-weight: bold
+}
+h1 .red{
+    color: red;
+    font-weight: bold
+}
