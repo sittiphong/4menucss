@@ -24,7 +24,7 @@ h1 .red{
     color: red;
     font-weight: bold
 }
-p {
+.pindent {
     text-indent: 50px;
 }
 p .green{
@@ -79,4 +79,48 @@ p .blue{
 /*Images Content Postion*/
 .content-img{
     text-align: center;
+    padding : 10px 0px 10px 0px 
+}
+/*List Style*/
+.liststyhira ul{
+    list-style-type: hiragana;
+}
+.liststyhira ul li::marker{
+    color: red;
+}
+.liststyroman ul{
+    list-style-type: upper-roman;
+}
+.liststyroman ul li::marker{
+    color: red;
+}
+.liststyimg ul{
+    list-style: none;
+}
+.liststyimg ul li::before{
+    content: '';
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-size: 12px;
+    background-image: url('/images/right-arrow.svg');
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.li-red-highlight{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+.li-green-highlight{
+    color: green;
+    font-weight: bold;
+}
+/* Footer */
+.footer{
+    float: right;
+}
+.footer-table{
+    border-collapse: 1px;
+    border: 1px solid black;
 }
