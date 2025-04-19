@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ex.css">
     <title>การสร้างตารางข้อมูล</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        h1 {
+        h1{
             text-align: center;
             color: blue;
         }
@@ -29,7 +27,7 @@
             text-align: left;
         }
         .table-purple th {
-            background-color: #e6ccff; 
+             
         }
         .table-purple tr:nth-child(even) {
             background-color: rgba(230, 204, 255, 0.5); 
@@ -40,7 +38,7 @@
 
        
         .table-blue {
-            width: 100%;
+            width: 50%;
             border-collapse: collapse;
             margin-top: 10px;
         }
@@ -119,17 +117,19 @@
             width: 50px;
             height: 50px;
             margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
 </head>
 <body>
+    <div class="container">
 
     <h1><span  class="blue">การสร้าง</span><span class="red">ตาราง</span><span class="purple">ข้อมูล</span></h1>
-    <p>
-        เมื่อต้องใช้ฐานข้อมูล Access ในการจัดเก็บข้อมูลต่าง ๆ การสร้างตารางข้อมูลเป็นสิ่งจำเป็น 
+    <p class="pindent">
+        <span class="green">เมื่อต้องใช้ฐานข้อมูล Access ในการจัดเก็บข้อมูลต่าง ๆ การสร้างตารางข้อมูลเป็นสิ่งจำเป็น 
         กระบวนการสร้างตารางนี้ จะช่วยให้สามารถบันทึกข้อมูลเชิงโครงสร้างได้ดีขึ้น 
-        ดังนั้นควรศึกษาชนิดของข้อมูลที่รองรับใน Access ก่อน
+        ดังนั้นควรศึกษาชนิดของข้อมูลที่รองรับใน Access ก่อน</span>
     </p>
 
     <table class="table-purple">
@@ -171,8 +171,8 @@
             <td>เก็บข้อมูลที่เป็นลักษณะวัตถุ เช่น Excel, Word หรือ ไฟล์ภาพ</td>
         </tr>
     </table>
-      <p class="highlight">ตัวอย่าง:</p>
-
+    <br>
+    <div class="topic_purple">ตัวอย่าง:</div>
     <p class="red"><i>ตารางข้อมูลประเภทสินค้า (tbProductType)</i></p>
     <table class="table-blue">
         <tr>
@@ -234,16 +234,18 @@
         <td>รหัสประเภทสินค้า</td>
     </tr>
 </table>
-
-<div class="link-container">
-        <a href="Ex_css1.html" class="link-box link-css1">
-            <img src="ex_css1.png" alt="Ex_css1">
-            Ex_css1
-        </a>
-        <a href="Ex_css3.html" class="link-box link-css3">
-            <img src="ex_css3.png" alt="Ex_css3">
-            Ex_css3
-        </a>
-    </div>
+<div class="footer">
+    <table class="footer-table">
+        <tr>
+            <td class="tdlightblue"><img src="/images/page2-arrow-left.svg"></td>
+            <td class="tdcream"><img src="/images/page2-arrow-right.svg"></td>
+        </tr>
+        <tr>
+            <td class="tdyellow"><a href="test_css1.html">Ex_css1</a></td>
+            <td class="tdpink"><a href="test_css3.html">Ex_css3</a></td>
+        </tr>
+    </table>
+</div>
+</div>
 </body>
 </html>
